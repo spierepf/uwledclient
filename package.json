@@ -1,0 +1,9 @@
+{
+  "urls": [
+    ["uwledclient.py", "github:spierepf/uwledclient/uwledclient.py"]
+  ],
+  "deps": [
+    ["urllib.urequest", "latest"]
+  ],
+  "version": "0.1"
+}
