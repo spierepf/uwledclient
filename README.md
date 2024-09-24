@@ -30,7 +30,7 @@ node.update()\
     .length(16).fx("Pride 2015").next()\
     .length(16).pal("Aurora").fx("Aurora").next()\
     .length(16).pal("Atlantica").fx("Dancing Shadows").next()\
-    .length(16).col([[255,0,0]).fx("Chunchun").next()\
+    .length(16).col([[255,0,0]]).fx("Chunchun").next()\
     .done()
 ```
 
