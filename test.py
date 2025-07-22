@@ -4,6 +4,7 @@ import install
 
 if 'unittest' not in os.listdir(install.libpath):
     import mip
+
     mip.install('unittest', target=install.libpath)
 
 import unittest
@@ -99,6 +100,7 @@ class TestSegmentBuilder(unittest.TestCase):
             callback = Callback()
             SegmentBuilder(1, 1, {'Solid': 0}, {}, callback).pal(special_string).next().done()
             assert callback.segments[0]['pal'] == special_string
+
 
 if __name__ == "__main__":
     unittest.main()

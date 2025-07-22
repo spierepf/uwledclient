@@ -48,6 +48,7 @@ try:
     from urllib.urequest import urlopen
     import ujson
 
+
     class WLEDNode:
         def __init__(self, base_url):
             self.base_url = base_url

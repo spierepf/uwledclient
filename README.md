@@ -1,10 +1,12 @@
 # uwledclient
 
-uwledclient is a MicropPython library to interact with the [WLED JSON API](https://kno.wled.ge/interfaces/json-api/).
+uwledclient is a MicroPython library to interact with the [WLED JSON API](https://kno.wled.ge/interfaces/json-api/).
 
 ## Installation
 
-Use the package manager [mip](https://docs.micropython.org/en/latest/reference/packages.html#installing-packages-with-mip) to install uwledclient.
+Use the package
+manager [mip](https://docs.micropython.org/en/latest/reference/packages.html#installing-packages-with-mip) to install
+uwledclient.
 
 ```python
 >>> import mip
@@ -36,7 +38,9 @@ node.update()\
 
 ## Basics
 
-Any of the JSON keys listed in the [Contents of the segment object](https://kno.wled.ge/interfaces/json-api/#contents-of-the-segment-object) table can be used as
+Any of the JSON keys listed in
+the [Contents of the segment object](https://kno.wled.ge/interfaces/json-api/#contents-of-the-segment-object) table can
+be used as
 method names.
 
 The keys `start`, and `stop` are managed internally by this library.
@@ -51,6 +55,7 @@ The `length(n)` method determines the number of LEDs to assign to the current
 segment. A segment without a `length(n)` call will use all remaining LEDs of the node.
 
 Calling the `done()` method actually sends the request to the WLED node.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first

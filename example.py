@@ -1,7 +1,6 @@
-import install
-from uwledclient import WLEDNode
 from time import sleep
 
+from uwledclient import WLEDNode
 
 n = WLEDNode('http://wled.local')
 
