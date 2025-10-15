@@ -50,11 +50,14 @@ try:
 
 
     class WLEDNode:
+        effects = None
+        palettes = None
+
         def __init__(self, base_url):
             self.base_url = base_url
             self.leds = self.api_read('info')['leds']
-            self.effects = dict((v, k) for (k, v) in enumerate(self.api_read('effects')))
-            self.palettes = dict((v, k) for (k, v) in enumerate(self.api_read('palettes')))
+            WLEDNode.effects = WLEDNode.effects if self.effects is not None else dict((v, k) for (k, v) in enumerate(self.api_read('effects')))
+            WLEDNode.palettes = WLEDNode.palettes if self.palettes is not None else dict((v, k) for (k, v) in enumerate(self.api_read('palettes')))
 
         def api_read(self, endpoint):
             socket = urlopen(self.base_url + '/json/' + endpoint)
@@ -68,5 +71,9 @@ try:
 
         def update(self):
             return SegmentBuilder(self.leds['maxseg'], self.leds['count'], self.effects, self.palettes, self.callback)
+
+        def __repr__(self):
+            return f"<WLEDNode: {self.base_url}>"
 except ImportError:
     pass
+
