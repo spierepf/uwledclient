@@ -1,6 +1,7 @@
 {
   "urls": [
-    ["uwledclient.py", "github:spierepf/uwledclient/uwledclient.py"]
+    ["uwledclient.py", "github:spierepf/uwledclient/uwledclient.py"],
+    ["uwledclient.py", "github:spierepf/uwledclient/udp_notifier.py"]
   ],
   "deps": [
     ["urllib.urequest", "latest"]
